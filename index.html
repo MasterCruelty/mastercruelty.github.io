@@ -1,45 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<link rel = "stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
-		<script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
-		<meta charset="utf-8">
-		<meta name="vewport" content="width=device-width, initial-scale=1">
-
-		<div class="container-fluid">
-			<title>
-				MasterCruelty's Home Page
-			</title>
-		</div>
-	</head>
-	<body>
-		<div class="container">
-			<h1><center>MasterCruelty's website</h1>
-			<ul class="nav nav-tabs">
-				<li class="active"><a data-toggle="tab" href="#home">Home</a></li>
-				<li><a data-toggle="tab" href="#progetti">Progetti</a></li>
-				<li><a data-toggle="tab" href="#atmshitposting">AT/M Shitposting</a></li>
-			</ul>
-		<div class="tab-content">
-			<div id="home" class="tab-pane fade in active">
-				<div class="embed-responsive embed-responsive-16by9">
-					<iframe class="embed-responsive-item" src="src/home.html"></iframe>
-				</div>
-			</div>		
-			<div id="progetti" class="tab-pane fade">
-				<div class="embed-responsive embed-responsive-16by9">
-					<iframe class="embed-responsive-item" src="src/progetti.html"></iframe>
-				</div>
-			</div>
-			<div id="atmshitposting" class="tab-pane fade">
-				<div class="embed-responsive embed-responsive-16by9">
-					<iframe class="embed-responsive-item" sandbox="allow-top-navigation allow-scripts allow-forms allow-popups" src="src/atmshitposting.html"></iframe>
-				</div>				
-			</div>
-		</div>
-		</div>
-				
-
-	</body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>MasterCruelty's Home Page</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="style.css"> <!-- Aggiunto il collegamento al file CSS personalizzato -->
+</head>
+<body>
+    <header>
+        <h1>MasterCruelty's website</h1>
+        <nav>
+            <ul class="nav nav-tabs">
+                <li class="active"><a data-toggle="tab" href="#home">Home</a></li>
+                <li><a data-toggle="tab" href="#progetti">Progetti</a></li>
+                <li><a data-toggle="tab" href="#atmshitposting">AT/M Shitposting</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="container tab-content">
+            <div id="home" class="tab-pane fade in active">
+                <div class="embed-responsive embed-responsive-16by9">
+                    <iframe class="embed-responsive-item" src="src/home.html"></iframe>
+                </div>
+            </div>     
+            <div id="progetti" class="tab-pane fade">
+                <div class="embed-responsive embed-responsive-16by9">
+                    <iframe class="embed-responsive-item" src="src/progetti.html"></iframe>
+                </div>
+            </div>
+            <div id="atmshitposting" class="tab-pane fade">
+                <div class="embed-responsive embed-responsive-16by9">
+                    <iframe class="embed-responsive-item" sandbox="allow-top-navigation allow-scripts allow-forms allow-popups" src="src/atmshitposting.html"></iframe>
+                </div>              
+            </div>
+        </div>
+    </main>
+</body>
 </html>
