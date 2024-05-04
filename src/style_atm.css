@@ -1,0 +1,7 @@
+/* Body */
+body {
+    background-image: url("logo.jpg");
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+
