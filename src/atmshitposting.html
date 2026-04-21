@@ -1,26 +1,174 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="it">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>AT/M Shitposting</title>
-    <link rel = "stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
-	<link rel="stylesheet" type="text/css" href="style_atm.css">
-	<script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
-	<meta charset="utf-8">
-	<meta name="vewport" content="width=device-width, initial-scale=1">
-	<base target="_parent">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AT/M Shitposting</title>
+  <base target="_parent">
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;700&family=Syne:wght@400;700;800&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background-color: #0b0e13;
+      color: #c8cdd8;
+      font-family: 'JetBrains Mono', monospace;
+      padding: 32px 36px 48px;
+      line-height: 1.7;
+    }
+
+    h2, h3 {
+      font-family: 'Syne', sans-serif;
+      font-weight: 800;
+      color: #f0f2f5;
+      letter-spacing: -.02em;
+      line-height: 1.15;
+    }
+    h2 { font-size: 1.4rem;  margin-bottom: 12px; }
+    h3 { font-size: 1.05rem; margin-bottom: 8px; }
+
+    p {
+      font-size: .9rem;
+      color: #c8cdd8;
+      margin-bottom: 1em;
+    }
+
+    strong, b { color: #f0f2f5; }
+
+    a { color: #e8ff47; text-decoration: none; }
+    a:hover { opacity: .75; text-decoration: underline; }
+
+    hr {
+      border: none;
+      height: 1px;
+      background: linear-gradient(90deg, #e8ff47, rgba(232,255,71,.1), transparent);
+      margin: 28px 0;
+      opacity: .5;
+    }
+
+    .section-label {
+      font-size: .68rem;
+      letter-spacing: .2em;
+      text-transform: uppercase;
+      color: #e8ff47;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+    .section-label::before {
+      content: '';
+      width: 24px; height: 1px;
+      background: #e8ff47; opacity: .6;
+    }
+
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 16px;
+      margin-bottom: 16px;
+    }
+
+    .card {
+      background: #111520;
+      border: 1px solid rgba(255,255,255,.07);
+      padding: 20px 24px;
+      position: relative;
+      transition: border-color .2s, background .2s;
+    }
+    .card:hover {
+      border-color: rgba(232,255,71,.3);
+      background: rgba(232,255,71,.03);
+    }
+    .card::before {
+      content: '';
+      position: absolute; top: -1px; left: -1px;
+      width: 10px; height: 10px;
+      border-top: 2px solid #e8ff47;
+      border-left: 2px solid #e8ff47;
+      opacity: 0; transition: opacity .2s;
+    }
+    .card:hover::before { opacity: 1; }
+    .card h3 { color: #f0f2f5; margin-bottom: 6px; }
+    .card p  { color: #4a5060; margin-bottom: 12px; }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: .78rem;
+      letter-spacing: .08em;
+      text-transform: lowercase;
+      padding: 9px 20px;
+      border: 1px solid rgba(255,255,255,.07);
+      background: transparent;
+      color: #c8cdd8;
+      cursor: pointer;
+      transition: border-color .2s, color .2s, background .2s;
+      text-decoration: none;
+    }
+    .btn:hover {
+      border-color: #e8ff47; color: #e8ff47;
+      background: rgba(232,255,71,.05);
+      text-decoration: none; opacity: 1;
+    }
+    .btn.primary { border-color: #e8ff47; color: #e8ff47; }
+
+    @media (max-width: 600px) {
+      body { padding: 20px 18px 40px; }
+      .card-grid { grid-template-columns: 1fr; }
+    }
+  </style>
 </head>
 <body>
-    <h3>AT/M Shitposting</h3>
-    <center>
-        <h4>Si tratta di una pagina creata il 27 Gennaio 2017 il cui scopo è fare satira e disegnare memes focalizzati su ATM(Azienda Trasporti Milanesi S.p.A) e/o riguardanti la sfera di Milano e dintorni. Qui di seguito è possibile trovare i link principali per raggiungere la community su Facebook, Instagram e Telegram!</h4>
-    </center>
-    <a href="https://www.facebook.com/atmshitposting/" target="_blank">Visita AT/M Shitposting su Facebook!</a><br>
-    <a href="https://www.instagram.com/atm_shitposting" target="_blank">Visita AT/M Shitposting su Instagram!</a><br>
-	<a href="https://t.me/atmshitpostingChannel" rel="noopener noreferrer nofollow" target="_blank"><b>Visita AT/M Shitposting su Telegram!</b></a><br>
-	<a href="https://medium.com/lineadiretta/atm-incontra-suo-figlio-nato-a-suon-di-meme-cb6d82baaaea" rel="noopener noreferrer nofollow" target="_blank"><b>Intervista su linea diretta da parte di Atm stessa.</b></a><br>		
-	<a href="https://www.youtube.com/watch?v=d8mGHGavPSk&ab_channel=MilanoAllNews" target="_blank"><b>Video intervista da parte di Milano AllNews.</b></a>	
+
+  <p class="section-label">community</p>
+
+  <h2>AT/M Shitposting</h2>
+
+  <p>
+    Pagina creata il <strong>27 Gennaio 2017</strong> con lo scopo di fare satira
+    e disegnare memes focalizzati su ATM (Azienda Trasporti Milanesi S.p.A)
+    e sulla sfera di Milano e dintorni.
+  </p>
+
+  <hr>
+
+  <div class="card-grid">
+    <div class="card">
+      <h3>Facebook</h3>
+      <p>Pagina principale della community.</p>
+      <a class="btn primary" href="https://www.facebook.com/atmshitposting/" target="_blank">→ Visita su Facebook</a>
+    </div>
+    <div class="card">
+      <h3>Instagram</h3>
+      <p>Memes e contenuti visivi.</p>
+      <a class="btn primary" href="https://www.instagram.com/atm_shitposting" target="_blank">→ Visita su Instagram</a>
+    </div>
+    <div class="card">
+      <h3>Telegram</h3>
+      <p>Canale ufficiale di aggiornamenti.</p>
+      <a class="btn primary" href="https://t.me/atmshitpostingChannel" rel="noopener noreferrer nofollow" target="_blank">→ Visita su Telegram</a>
+    </div>
+  </div>
+
+  <hr>
+
+  <p class="section-label">press</p>
+
+  <div class="card-grid">
+    <div class="card">
+      <h3>Linea Diretta — Medium</h3>
+      <p>Intervista da parte di ATM stessa sulla community e i memes.</p>
+      <a class="btn" href="https://medium.com/lineadiretta/atm-incontra-suo-figlio-nato-a-suon-di-meme-cb6d82baaaea" rel="noopener noreferrer nofollow" target="_blank">→ Leggi l'intervista</a>
+    </div>
+    <div class="card">
+      <h3>Milano AllNews — YouTube</h3>
+      <p>Video intervista da parte di Milano AllNews.</p>
+      <a class="btn" href="https://www.youtube.com/watch?v=d8mGHGavPSk&ab_channel=MilanoAllNews" target="_blank">→ Guarda il video</a>
+    </div>
+  </div>
+
 </body>
 </html>

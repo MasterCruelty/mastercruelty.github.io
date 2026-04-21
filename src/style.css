@@ -1,51 +1,158 @@
-/* Body */
+/* ════════════════════════════════════════════════
+   MasterCruelty — src/style.css  (inner pages)
+   ════════════════════════════════════════════════ */
 
-body {    
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    background-size: cover; /* Assicura che l'immagine di sfondo copra l'intera pagina */
-    font-family: Arial, sans-serif;
-    color: #333; /* Colore del testo predefinito */margin: 0;
-    padding: 0;
+/* @import DEVE stare in cima, prima di qualsiasi regola */
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;700&family=Syne:wght@400;700;800&display=swap');
+
+/* ── TOKENS ─────────────────────────────────────── */
+:root {
+  --bg:       #0b0e13;
+  --bg1:      #111520;
+  --bg2:      #181d2a;
+  --border:   rgba(255, 255, 255, .07);
+  --accent:   #e8ff47;
+  --txt:      #c8cdd8;
+  --txt-dim:  #4a5060;
+  --white:    #f0f2f5;
 }
 
-/* Header */
-header {
-    background-color: #007bff; /* Colore di sfondo dell'intestazione */
-    padding: 20px;
+/* ── RESET ──────────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+/* ── BASE ───────────────────────────────────────── */
+body {
+  background-color: #0b0e13;
+  color: #c8cdd8;
+  font-family: 'JetBrains Mono', monospace;
+  padding: 32px 36px 48px;
+  line-height: 1.7;
 }
 
-header h1 {
-    text-align: center;
-    color: #fff; /* Colore del testo del titolo */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Syne', sans-serif;
+  font-weight: 800;
+  color: #f0f2f5;
+  letter-spacing: -.02em;
+  line-height: 1.15;
 }
 
-nav ul {
-    padding: 0;
-    margin: 0;
-    list-style-type: none;
+h1 { font-size: clamp(1.8rem, 4vw, 2.8rem); margin-bottom: 16px; }
+h2 { font-size: 1.4rem;  margin-bottom: 12px; }
+h3 { font-size: 1.05rem; margin-bottom: 8px; }
+
+p {
+  font-size: .9rem;
+  color: #c8cdd8;
+  margin-bottom: 1em;
 }
 
-nav ul li {
-    display: inline;
+a { color: #e8ff47; text-decoration: none; transition: opacity .15s; }
+a:hover { opacity: .75; text-decoration: underline; }
+
+strong, b { color: #f0f2f5; font-weight: 700; }
+
+hr {
+  border: none; height: 1px;
+  background: linear-gradient(90deg, #e8ff47, rgba(232,255,71,.1), transparent);
+  margin: 28px 0; opacity: .5;
 }
 
-nav ul li a {
-    color: #fff;
-    text-decoration: none;
-    padding: 10px;
+ul, ol { padding-left: 20px; margin-bottom: 1em; }
+li { font-size: .9rem; color: #c8cdd8; margin-bottom: .35em; }
+li::marker { color: #e8ff47; }
+
+code {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: .82rem; padding: 2px 6px;
+  background: #181d2a; border: 1px solid rgba(255,255,255,.07);
+  border-radius: 3px; color: #e8ff47;
 }
 
-nav ul li.active a {
-    background-color: #0056b3; /* Colore di sfondo dell'elemento attivo */
+pre {
+  font-family: 'JetBrains Mono', monospace;
+  padding: 16px 20px; overflow-x: auto;
+  font-size: .82rem; line-height: 1.6; color: #c8cdd8;
+  background: #181d2a; border: 1px solid rgba(255,255,255,.07);
+  margin-bottom: 1.2em;
+}
+pre code { background: none; border: none; padding: 0; color: inherit; }
+
+/* ── SECTION LABEL ──────────────────────────────── */
+.section-label {
+  font-size: .68rem; letter-spacing: .2em; text-transform: uppercase;
+  color: #e8ff47; display: flex; align-items: center; gap: 10px;
+  margin-bottom: 20px;
+}
+.section-label::before {
+  content: ''; width: 24px; height: 1px; background: #e8ff47; opacity: .6;
 }
 
-/* Main */
-main {
-    padding: 20px;
+/* ── CARD ───────────────────────────────────────── */
+.card {
+  background: #111520;
+  border: 1px solid rgba(255, 255, 255, .07);
+  padding: 20px 24px;
+  position: relative;
+  transition: border-color .2s, background .2s;
+  margin-bottom: 16px;
+}
+.card:hover { border-color: rgba(232,255,71,.3); background: rgba(232,255,71,.03); }
+.card::before {
+  content: ''; position: absolute; top: -1px; left: -1px;
+  width: 10px; height: 10px;
+  border-top: 2px solid #e8ff47; border-left: 2px solid #e8ff47;
+  opacity: 0; transition: opacity .2s;
+}
+.card:hover::before { opacity: 1; }
+.card h3 { font-size: 1rem; margin-bottom: 6px; color: #f0f2f5; }
+.card p  { font-size: .85rem; color: #4a5060; margin-bottom: 12px; }
+
+/* ── CARD GRID ──────────────────────────────────── */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 16px; margin-bottom: 16px;
 }
 
-/* Iframe */
-.embed-responsive {
-    margin-top: 20px;
+/* ── TABLE ──────────────────────────────────────── */
+table { width: 100%; border-collapse: collapse; font-size: .85rem; margin-bottom: 1.2em; }
+thead tr { border-bottom: 1px solid rgba(232,255,71,.3); }
+th {
+  font-family: 'JetBrains Mono', monospace; font-size: .68rem;
+  letter-spacing: .12em; text-transform: uppercase;
+  color: #e8ff47; padding: 8px 12px; text-align: left; font-weight: 400;
+}
+td { padding: 9px 12px; border-bottom: 1px solid rgba(255,255,255,.07); color: #c8cdd8; vertical-align: top; }
+tr:hover td { background: rgba(232,255,71,.03); }
+
+/* ── BUTTON ─────────────────────────────────────── */
+.btn {
+  display: inline-flex; align-items: center; gap: 8px;
+  font-family: 'JetBrains Mono', monospace; font-size: .78rem;
+  letter-spacing: .08em; text-transform: lowercase;
+  padding: 9px 20px; border: 1px solid rgba(255,255,255,.07);
+  background: transparent; color: #c8cdd8;
+  cursor: pointer; transition: border-color .2s, color .2s, background .2s;
+  text-decoration: none;
+}
+.btn:hover {
+  border-color: #e8ff47; color: #e8ff47;
+  background: rgba(232,255,71,.05); text-decoration: none; opacity: 1;
+}
+.btn.primary { border-color: #e8ff47; color: #e8ff47; }
+
+/* ── TAG ────────────────────────────────────────── */
+.tag {
+  display: inline-block; font-size: .68rem; letter-spacing: .08em;
+  text-transform: uppercase; padding: 3px 10px;
+  border: 1px solid rgba(255,255,255,.07); color: #4a5060;
+  margin-right: 6px; margin-bottom: 6px;
+}
+.tag.accent { border-color: rgba(232,255,71,.4); color: #e8ff47; }
+
+/* ── RESPONSIVE ─────────────────────────────────── */
+@media (max-width: 600px) {
+  body { padding: 20px 18px 40px; }
+  .card-grid { grid-template-columns: 1fr; }
 }

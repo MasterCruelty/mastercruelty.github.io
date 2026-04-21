@@ -1,43 +1,113 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>MasterCruelty's Home Page</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" href="style.css"> 
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MasterCruelty</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;700&family=Syne:wght@400;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <header>
-        <h1>MasterCruelty's website</h1>
-        <nav>
-            <ul class="nav nav-tabs">
-                <li class="active"><a data-toggle="tab" href="#home">Home</a></li>
-                <li><a data-toggle="tab" href="#progetti">Progetti</a></li>
-                <li><a data-toggle="tab" href="#atmshitposting">AT/M Shitposting</a></li>
-            </ul>
-        </nav>
-    </header>
-    <main>
-        <div class="container tab-content">
-            <div id="home" class="tab-pane fade in active">
-                <div class="embed-responsive embed-responsive-16by9">
-                    <iframe class="embed-responsive-item" src="src/home.html"></iframe>
-                </div>
-            </div>     
-            <div id="progetti" class="tab-pane fade">
-                <div class="embed-responsive embed-responsive-16by9">
-                    <iframe class="embed-responsive-item" src="src/progetti.html"></iframe>
-                </div>
-            </div>
-            <div id="atmshitposting" class="tab-pane fade">
-                <div class="embed-responsive embed-responsive-16by9">
-                    <iframe class="embed-responsive-item" sandbox="allow-top-navigation allow-scripts allow-forms allow-popups" src="src/atmshitposting.html"></iframe>
-                </div>              
-            </div>
+
+  <header>
+    <div class="logo">Master<span>Cruelty</span></div>
+    <div class="logo-sep"></div>
+    <nav>
+      <button class="tab-btn active" data-tab="home">
+        <span class="tab-idx">01</span>home
+      </button>
+      <button class="tab-btn" data-tab="progetti">
+        <span class="tab-idx">02</span>progetti
+      </button>
+      <button class="tab-btn" data-tab="atmshitposting">
+        <span class="tab-idx">03</span>at/m shitposting
+      </button>
+    </nav>
+    <div class="header-spacer"></div>
+    <div class="status">
+      <span class="status-dot"></span>
+      <span>online</span>
+    </div>
+  </header>
+
+  <div class="hero visible" id="hero">
+    <p class="hero-tag">personal space</p>
+    <h1 class="hero-name">Hello,<br>I'm <span class="accent-txt">MasterCruelty</span></h1>
+    <p class="hero-sub">Welcome to my little corner of the internet.</p>
+    <div class="hero-divider"></div>
+  </div>
+
+  <div class="content-area">
+
+    <div id="tab-home" class="tab-panel active">
+      <div class="iframe-wrap">
+        <div class="iframe-chrome">
+          <div class="chrome-dots">
+            <div class="chrome-dot"></div>
+            <div class="chrome-dot"></div>
+            <div class="chrome-dot"></div>
+          </div>
+          <div class="chrome-url">mastercruelty.github.io/src/home.html</div>
         </div>
-    </main>
+        <iframe src="src/home.html" title="Home" loading="lazy"></iframe>
+      </div>
+    </div>
+
+    <div id="tab-progetti" class="tab-panel">
+      <div class="iframe-wrap">
+        <div class="iframe-chrome">
+          <div class="chrome-dots">
+            <div class="chrome-dot"></div>
+            <div class="chrome-dot"></div>
+            <div class="chrome-dot"></div>
+          </div>
+          <div class="chrome-url">mastercruelty.github.io/src/progetti.html</div>
+        </div>
+        <iframe src="src/progetti.html" title="Progetti" loading="lazy"></iframe>
+      </div>
+    </div>
+
+    <div id="tab-atmshitposting" class="tab-panel">
+      <div class="iframe-wrap">
+        <div class="iframe-chrome">
+          <div class="chrome-dots">
+            <div class="chrome-dot"></div>
+            <div class="chrome-dot"></div>
+            <div class="chrome-dot"></div>
+          </div>
+          <div class="chrome-url">mastercruelty.github.io/src/atmshitposting.html</div>
+        </div>
+        <iframe
+          src="src/atmshitposting.html"
+          title="AT/M Shitposting"
+          sandbox="allow-top-navigation allow-scripts allow-forms allow-popups"
+          loading="lazy">
+        </iframe>
+      </div>
+    </div>
+
+  </div>
+
+  <script>
+    const tabs   = document.querySelectorAll('.tab-btn');
+    const panels = document.querySelectorAll('.tab-panel');
+    const hero   = document.getElementById('hero');
+
+    tabs.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const target = btn.dataset.tab;
+
+        tabs.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+
+        panels.forEach(p => p.classList.remove('active'));
+        document.getElementById('tab-' + target).classList.add('active');
+
+        hero.classList.toggle('visible', target === 'home');
+      });
+    });
+  </script>
+
 </body>
 </html>
