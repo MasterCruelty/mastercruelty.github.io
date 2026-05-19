@@ -16,15 +16,9 @@
     <div class="logo">Master<span>Cruelty</span></div>
     <div class="logo-sep"></div>
     <nav>
-      <button class="tab-btn active" data-tab="home">
-        <span class="tab-idx">01</span>home
-      </button>
-      <button class="tab-btn" data-tab="progetti">
-        <span class="tab-idx">02</span>progetti
-      </button>
-      <button class="tab-btn" data-tab="atmshitposting">
-        <span class="tab-idx">03</span>at/m shitposting
-      </button>
+      <button class="tab-btn active" data-tab="home"><span class="tab-idx">01</span>home</button>
+      <button class="tab-btn"        data-tab="progetti"><span class="tab-idx">02</span>progetti</button>
+      <button class="tab-btn"        data-tab="atmshitposting"><span class="tab-idx">03</span>at/m shitposting</button>
     </nav>
     <div class="header-spacer"></div>
     <div class="status">
@@ -56,56 +50,16 @@
             projects. This site is where I park academic work, personal experiments, and the
             ATM Shitposting community I've kept alive since 2017.
           </p>
-
-          <div class="pill-row">
-            <span class="pill">Python</span>
-            <span class="pill">Telegram Bots</span>
-            <span class="pill">Linux</span>
-            <span class="pill">Data Analysis</span>
-            <span class="pill">C / Go</span>
-            <span class="pill">Cloud</span>
-          </div>
+          <div class="pill-row" id="pills"></div>
         </div>
 
         <aside class="links-card">
           <p class="section-label">elsewhere</p>
-          <a class="link-row" href="https://github.com/MasterCruelty" target="_blank" rel="noopener">
-            <span class="link-key">github</span>
-            <span class="link-val">@MasterCruelty</span>
-            <span class="link-arrow">↗</span>
-          </a>
-          <a class="link-row" href="https://t.me/atmshitpostingChannel" target="_blank" rel="noopener">
-            <span class="link-key">telegram</span>
-            <span class="link-val">atm channel</span>
-            <span class="link-arrow">↗</span>
-          </a>
-          <a class="link-row" href="https://www.facebook.com/atmshitposting/" target="_blank" rel="noopener">
-            <span class="link-key">facebook</span>
-            <span class="link-val">atm shitposting</span>
-            <span class="link-arrow">↗</span>
-          </a>
-          <a class="link-row" href="https://www.instagram.com/atm_shitposting" target="_blank" rel="noopener">
-            <span class="link-key">instagram</span>
-            <span class="link-val">@atm_shitposting</span>
-            <span class="link-arrow">↗</span>
-          </a>
+          <div id="links"></div>
         </aside>
       </div>
 
-      <div class="stat-row">
-        <div class="stat">
-          <div class="stat-num">15<span class="stat-plus">+</span></div>
-          <div class="stat-label">public repos</div>
-        </div>
-        <div class="stat">
-          <div class="stat-num">2017</div>
-          <div class="stat-label">atm shitposting founded</div>
-        </div>
-        <div class="stat">
-          <div class="stat-num">∞</div>
-          <div class="stat-label">cups of coffee</div>
-        </div>
-      </div>
+      <div class="stat-row" id="stats"></div>
     </section>
 
     <!-- ────────── PROGETTI ────────── -->
@@ -115,156 +69,14 @@
       <p class="section-label">university</p>
       <h2 class="block-title">Academic projects</h2>
       <p class="block-sub">Coursework, labs, and the bachelor's thesis.</p>
-
-      <div class="card-grid">
-        <a class="card project-card" href="https://github.com/MasterCruelty/alarm-project" target="_blank" rel="noopener">
-          <div class="card-head">
-            <span class="card-tag">embedded</span>
-            <span class="card-ext">↗</span>
-          </div>
-          <h3>Alarm Project</h3>
-          <p>Embedded systems coursework — a small alarm built around a microcontroller.</p>
-          <div class="card-tech"><span>C</span><span>Arduino</span></div>
-        </a>
-
-        <a class="card project-card" href="https://github.com/MasterCruelty/halflifeassembly" target="_blank" rel="noopener">
-          <div class="card-head">
-            <span class="card-tag">architecture</span>
-            <span class="card-ext">↗</span>
-          </div>
-          <h3>Half-Life Assembly</h3>
-          <p>Computer architecture project, working close to the metal in assembly.</p>
-          <div class="card-tech"><span>Assembly</span><span>x86</span></div>
-        </a>
-
-        <a class="card project-card" href="https://github.com/MasterCruelty/bikesharingproject" target="_blank" rel="noopener">
-          <div class="card-head">
-            <span class="card-tag">software-eng</span>
-            <span class="card-ext">↗</span>
-          </div>
-          <h3>Bike Sharing</h3>
-          <p>Full software engineering exercise — from requirements to a working prototype.</p>
-          <div class="card-tech"><span>Java</span><span>UML</span></div>
-        </a>
-
-        <a class="card project-card" href="https://github.com/MasterCruelty/Thesis-IAC" target="_blank" rel="noopener">
-          <div class="card-head">
-            <span class="card-tag">thesis</span>
-            <span class="card-ext">↗</span>
-          </div>
-          <h3>Bachelor's Thesis — IAC</h3>
-          <p>Final dissertation work for the bachelor's degree.</p>
-          <div class="card-tech"><span>Research</span><span>LaTeX</span></div>
-        </a>
-
-        <a class="card project-card" href="https://github.com/MasterCruelty/StatisticStuffs" target="_blank" rel="noopener">
-          <div class="card-head">
-            <span class="card-tag">notes</span>
-            <span class="card-ext">↗</span>
-          </div>
-          <h3>Statistic Stuffs</h3>
-          <p>A growing pile of notes and exercises on statistics.</p>
-          <div class="card-tech"><span>Stats</span><span>R</span></div>
-        </a>
-
-        <a class="card project-card" href="https://github.com/MasterCruelty/C-Go-Algorithms" target="_blank" rel="noopener">
-          <div class="card-head">
-            <span class="card-tag">algorithms</span>
-            <span class="card-ext">↗</span>
-          </div>
-          <h3>C / Go Algorithms</h3>
-          <p>Notes and source code for classic algorithms, in C and Go.</p>
-          <div class="card-tech"><span>C</span><span>Go</span></div>
-        </a>
-
-        <a class="card project-card" href="https://github.com/MasterCruelty/cloud-computing-technologies" target="_blank" rel="noopener">
-          <div class="card-head">
-            <span class="card-tag">cloud</span>
-            <span class="card-ext">↗</span>
-          </div>
-          <h3>Cloud Computing</h3>
-          <p>A simple cloud architecture project for the cloud computing course.</p>
-          <div class="card-tech"><span>Cloud</span><span>Docker</span></div>
-        </a>
-      </div>
+      <div class="card-grid" id="university"></div>
 
       <div class="block-divider"></div>
 
       <p class="section-label">personal</p>
       <h2 class="block-title">Personal projects</h2>
       <p class="block-sub">Tools, bots, and experiments built for fun.</p>
-
-      <div class="card-grid">
-        <a class="card project-card" href="https://github.com/MasterCruelty/my-tg-app" target="_blank" rel="noopener">
-          <div class="card-head">
-            <span class="card-tag">telegram</span>
-            <span class="card-ext">↗</span>
-          </div>
-          <h3>my-tg-app</h3>
-          <p>A Telegram userbot packed with utilities I use every day.</p>
-          <div class="card-tech"><span>Python</span><span>Telethon</span></div>
-        </a>
-
-        <a class="card project-card" href="https://github.com/MasterCruelty/robbot" target="_blank" rel="noopener">
-          <div class="card-head">
-            <span class="card-tag">telegram</span>
-            <span class="card-ext">↗</span>
-          </div>
-          <h3>robbot</h3>
-          <p>My personal Telegram bot — group helper and tinker playground.</p>
-          <div class="card-tech"><span>Python</span><span>Bot API</span></div>
-        </a>
-
-        <a class="card project-card" href="https://github.com/TheMergers/emerger" target="_blank" rel="noopener">
-          <div class="card-head">
-            <span class="card-tag">linux</span>
-            <span class="card-ext">↗</span>
-          </div>
-          <h3>eMerger</h3>
-          <p>A handy CLI tool for Linux devices, built with the Mergers crew.</p>
-          <div class="card-tech"><span>Shell</span><span>Linux</span></div>
-        </a>
-
-        <a class="card project-card" href="https://github.com/MasterCruelty/MetroFlowRouter" target="_blank" rel="noopener">
-          <div class="card-head">
-            <span class="card-tag">transit</span>
-            <span class="card-ext">↗</span>
-          </div>
-          <h3>Metro Flow Router</h3>
-          <p>Calculates routes and fetches live data about metro systems.</p>
-          <div class="card-tech"><span>Python</span><span>Graphs</span></div>
-        </a>
-
-        <a class="card project-card" href="https://github.com/MasterCruelty/gokart-data-hub" target="_blank" rel="noopener">
-          <div class="card-head">
-            <span class="card-tag">data</span>
-            <span class="card-ext">↗</span>
-          </div>
-          <h3>GoKart Data Hub</h3>
-          <p>Data analysis on go-kart races — telemetry meets weekend hobby.</p>
-          <div class="card-tech"><span>Python</span><span>Pandas</span></div>
-        </a>
-
-        <a class="card project-card" href="https://github.com/MasterCruelty/TelegramChatInsights" target="_blank" rel="noopener">
-          <div class="card-head">
-            <span class="card-tag">data</span>
-            <span class="card-ext">↗</span>
-          </div>
-          <h3>Telegram Chat Insights</h3>
-          <p>Userbot that runs simple analytics on your personal chat interactions.</p>
-          <div class="card-tech"><span>Python</span><span>Telethon</span></div>
-        </a>
-
-        <a class="card project-card" href="https://github.com/MasterCruelty/tg-bot-skeleton" target="_blank" rel="noopener">
-          <div class="card-head">
-            <span class="card-tag">template</span>
-            <span class="card-ext">↗</span>
-          </div>
-          <h3>tg-bot-skeleton</h3>
-          <p>A starter template to spin up a Telegram bot or userbot fast.</p>
-          <div class="card-tech"><span>Python</span><span>Boilerplate</span></div>
-        </a>
-      </div>
+      <div class="card-grid" id="personal"></div>
     </section>
 
     <!-- ────────── AT/M SHITPOSTING ────────── -->
@@ -277,66 +89,14 @@
         Founded on <strong>27 January 2017</strong> — satire and memes about ATM
         (Azienda Trasporti Milanesi S.p.A) and the wider Milano universe.
       </p>
-
-      <div class="card-grid">
-        <a class="card social-card facebook" href="https://www.facebook.com/atmshitposting/" target="_blank" rel="noopener">
-          <div class="card-head">
-            <span class="card-tag">main</span>
-            <span class="card-ext">↗</span>
-          </div>
-          <h3>Facebook</h3>
-          <p>The community's main page — original memes and chronicles.</p>
-          <span class="card-cta">visit on facebook →</span>
-        </a>
-
-        <a class="card social-card instagram" href="https://www.instagram.com/atm_shitposting" target="_blank" rel="noopener">
-          <div class="card-head">
-            <span class="card-tag">visual</span>
-            <span class="card-ext">↗</span>
-          </div>
-          <h3>Instagram</h3>
-          <p>Visual content and a steady feed of fresh memes.</p>
-          <span class="card-cta">visit on instagram →</span>
-        </a>
-
-        <a class="card social-card telegram" href="https://t.me/atmshitpostingChannel" target="_blank" rel="noopener noreferrer nofollow">
-          <div class="card-head">
-            <span class="card-tag">updates</span>
-            <span class="card-ext">↗</span>
-          </div>
-          <h3>Telegram</h3>
-          <p>Official channel for updates and behind-the-scenes posts.</p>
-          <span class="card-cta">visit on telegram →</span>
-        </a>
-      </div>
+      <div class="card-grid" id="socials"></div>
 
       <div class="block-divider"></div>
 
       <p class="section-label">press</p>
       <h2 class="block-title">Featured in</h2>
       <p class="block-sub">Interviews and coverage about the community.</p>
-
-      <div class="card-grid">
-        <a class="card press-card" href="https://medium.com/lineadiretta/atm-incontra-suo-figlio-nato-a-suon-di-meme-cb6d82baaaea" target="_blank" rel="noopener noreferrer nofollow">
-          <div class="card-head">
-            <span class="card-tag">interview</span>
-            <span class="card-ext">↗</span>
-          </div>
-          <h3>Linea Diretta — Medium</h3>
-          <p>ATM themselves interviewing the community and its memes.</p>
-          <span class="card-cta">read the interview →</span>
-        </a>
-
-        <a class="card press-card" href="https://www.youtube.com/watch?v=d8mGHGavPSk&ab_channel=MilanoAllNews" target="_blank" rel="noopener">
-          <div class="card-head">
-            <span class="card-tag">video</span>
-            <span class="card-ext">↗</span>
-          </div>
-          <h3>Milano AllNews — YouTube</h3>
-          <p>Video interview by Milano AllNews on the page and its origins.</p>
-          <span class="card-cta">watch the video →</span>
-        </a>
-      </div>
+      <div class="card-grid" id="press"></div>
     </section>
 
   </main>
@@ -347,27 +107,8 @@
     <span>built with stubbornness &amp; coffee</span>
   </footer>
 
-  <script>
-    const tabs   = document.querySelectorAll('.tab-btn');
-    const panels = document.querySelectorAll('.tab-panel');
-    const hero   = document.getElementById('hero');
-
-    tabs.forEach(btn => {
-      btn.addEventListener('click', () => {
-        const target = btn.dataset.tab;
-
-        tabs.forEach(b => b.classList.toggle('active', b === btn));
-        panels.forEach(p => {
-          p.classList.toggle('active', p.id === 'tab-' + target);
-        });
-
-        hero.classList.toggle('visible', target === 'home');
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-      });
-    });
-
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
+  <script src="data.js"></script>
+  <script src="app.js"></script>
 
 </body>
 </html>
