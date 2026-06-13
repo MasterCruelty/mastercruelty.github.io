@@ -4,8 +4,10 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>MasterCruelty</title>
+  <meta name="description" content="MasterCruelty — personal space, academic and personal projects." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;700&family=Syne:wght@400;700;800&display=swap" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;700&family=Syne:wght@400;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -14,15 +16,9 @@
     <div class="logo">Master<span>Cruelty</span></div>
     <div class="logo-sep"></div>
     <nav>
-      <button class="tab-btn active" data-tab="home">
-        <span class="tab-idx">01</span>home
-      </button>
-      <button class="tab-btn" data-tab="progetti">
-        <span class="tab-idx">02</span>progetti
-      </button>
-      <button class="tab-btn" data-tab="atmshitposting">
-        <span class="tab-idx">03</span>at/m shitposting
-      </button>
+      <button class="tab-btn active" data-tab="home"><span class="tab-idx">01</span>home</button>
+      <button class="tab-btn"        data-tab="progetti"><span class="tab-idx">02</span>progetti</button>
+      <button class="tab-btn"        data-tab="atmshitposting"><span class="tab-idx">03</span>at/m shitposting</button>
     </nav>
     <div class="header-spacer"></div>
     <div class="status">
@@ -32,82 +28,87 @@
   </header>
 
   <div class="hero visible" id="hero">
+    <div class="hero-glow" aria-hidden="true"></div>
     <p class="hero-tag">personal space</p>
-    <h1 class="hero-name">Hello,<br>I'm <span class="accent-txt">MasterCruelty</span></h1>
-    <p class="hero-sub">Welcome to my little corner of the internet.</p>
+    <h1 class="hero-name">Hello,<br>I'm <span class="accent-txt">MasterCruelty</span><span class="caret">_</span></h1>
+    <p class="hero-sub">Welcome to my little corner of the internet — a place to collect academic work, side projects, and a community I've been running since 2017.</p>
     <div class="hero-divider"></div>
   </div>
 
-  <div class="content-area">
+  <main class="content-area">
 
-    <div id="tab-home" class="tab-panel active">
-      <div class="iframe-wrap">
-        <div class="iframe-chrome">
-          <div class="chrome-dots">
-            <div class="chrome-dot"></div>
-            <div class="chrome-dot"></div>
-            <div class="chrome-dot"></div>
-          </div>
-          <div class="chrome-url">mastercruelty.github.io/src/home.html</div>
+    <!-- ────────── HOME ────────── -->
+    <section id="tab-home" class="tab-panel active">
+      <div class="crumb"><span class="crumb-prompt">~/</span> home</div>
+
+      <div class="home-grid">
+        <div class="about-card">
+          <p class="section-label">about</p>
+          <h2 class="block-title">Software, side-projects &amp; a bit of mischief.</h2>
+          <p class="lede">
+            I'm a developer with a soft spot for Telegram bots, Linux tooling, and small data
+            projects. This site is where I park academic work, personal experiments, and the
+            ATM Shitposting community I've kept alive since 2017.
+          </p>
+          <div class="pill-row" id="pills"></div>
         </div>
-        <iframe src="src/home.html" title="Home" loading="lazy"></iframe>
+
+        <aside class="links-card">
+          <p class="section-label">elsewhere</p>
+          <div id="links"></div>
+        </aside>
       </div>
-    </div>
 
-    <div id="tab-progetti" class="tab-panel">
-      <div class="iframe-wrap">
-        <div class="iframe-chrome">
-          <div class="chrome-dots">
-            <div class="chrome-dot"></div>
-            <div class="chrome-dot"></div>
-            <div class="chrome-dot"></div>
-          </div>
-          <div class="chrome-url">mastercruelty.github.io/src/progetti.html</div>
-        </div>
-        <iframe src="src/progetti.html" title="Progetti" loading="lazy"></iframe>
-      </div>
-    </div>
+      <div class="stat-row" id="stats"></div>
+    </section>
 
-    <div id="tab-atmshitposting" class="tab-panel">
-      <div class="iframe-wrap">
-        <div class="iframe-chrome">
-          <div class="chrome-dots">
-            <div class="chrome-dot"></div>
-            <div class="chrome-dot"></div>
-            <div class="chrome-dot"></div>
-          </div>
-          <div class="chrome-url">mastercruelty.github.io/src/atmshitposting.html</div>
-        </div>
-        <iframe
-          src="src/atmshitposting.html"
-          title="AT/M Shitposting"
-          sandbox="allow-top-navigation allow-scripts allow-forms allow-popups"
-          loading="lazy">
-        </iframe>
-      </div>
-    </div>
+    <!-- ────────── PROGETTI ────────── -->
+    <section id="tab-progetti" class="tab-panel">
+      <div class="crumb"><span class="crumb-prompt">~/</span> progetti</div>
 
-  </div>
+      <p class="section-label">university</p>
+      <h2 class="block-title">Academic projects</h2>
+      <p class="block-sub">Coursework, labs, and the bachelor's thesis.</p>
+      <div class="card-grid" id="university"></div>
 
-  <script>
-    const tabs   = document.querySelectorAll('.tab-btn');
-    const panels = document.querySelectorAll('.tab-panel');
-    const hero   = document.getElementById('hero');
+      <div class="block-divider"></div>
 
-    tabs.forEach(btn => {
-      btn.addEventListener('click', () => {
-        const target = btn.dataset.tab;
+      <p class="section-label">personal</p>
+      <h2 class="block-title">Personal projects</h2>
+      <p class="block-sub">Tools, bots, and experiments built for fun.</p>
+      <div class="card-grid" id="personal"></div>
+    </section>
 
-        tabs.forEach(b => b.classList.remove('active'));
-        btn.classList.add('active');
+    <!-- ────────── AT/M SHITPOSTING ────────── -->
+    <section id="tab-atmshitposting" class="tab-panel">
+      <div class="crumb"><span class="crumb-prompt">~/</span> at-m-shitposting</div>
 
-        panels.forEach(p => p.classList.remove('active'));
-        document.getElementById('tab-' + target).classList.add('active');
+      <p class="section-label">community</p>
+      <h2 class="block-title">AT/M Shitposting</h2>
+      <p class="block-sub">
+        Founded on <strong>27 January 2017</strong> — satire and memes about ATM
+        (Azienda Trasporti Milanesi S.p.A) and the wider Milano universe.
+      </p>
+      <div class="card-grid" id="socials"></div>
 
-        hero.classList.toggle('visible', target === 'home');
-      });
-    });
-  </script>
+      <div class="block-divider"></div>
+
+      <p class="section-label">press</p>
+      <h2 class="block-title">Featured in</h2>
+      <p class="block-sub">Interviews and coverage about the community.</p>
+      <div class="card-grid" id="press"></div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <span>© <span id="year"></span> MasterCruelty</span>
+    <span class="footer-dot">·</span>
+    <span>built with stubbornness &amp; coffee</span>
+  </footer>
+
+  <script src="data.js"></script>
+  <script src="app.js"></script>
 
 </body>
 </html>
