@@ -76,7 +76,7 @@ fill('socials',    SITE.socials.map(linkCard('social-card')).join(''));
 fill('press',      SITE.press.map(linkCard('press-card')).join(''));
 
 /* ── TABS ──────────────────────────────────────────
-   The active tab lives in the URL hash (#progetti), so tabs can be
+   The active tab lives in the URL hash (#projects), so tabs can be
    linked directly and the browser back button works. */
 const tabs   = [...document.querySelectorAll('.tab-btn')];
 const panels = document.querySelectorAll('.tab-panel');
