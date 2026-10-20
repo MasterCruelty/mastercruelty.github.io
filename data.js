@@ -18,7 +18,6 @@ const SITE = {
   stats: [
     { num: '15', plus: true,  label: 'public repos' },
     { num: '2017',            label: 'atm shitposting founded' },
-    { num: '∞',               label: 'cups of coffee' },
   ],
 
   university: [
