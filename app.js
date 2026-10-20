@@ -1,5 +1,5 @@
 /* ════════════════════════════════════════════════
-   MasterCruelty — render + tab logic
+   MasterCruelty: render + tab logic
    ════════════════════════════════════════════════ */
 
 const esc = (s) => String(s).replace(/[&<>"']/g, (c) => ({

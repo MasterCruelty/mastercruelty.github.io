@@ -1,5 +1,5 @@
 /* ════════════════════════════════════════════════
-   MasterCruelty — site content
+   MasterCruelty: site content
    Edit the data here; markup is generated in app.js
    ════════════════════════════════════════════════ */
 
@@ -25,7 +25,7 @@ const SITE = {
     {
       tag: 'embedded',
       title: 'Alarm Project',
-      desc: 'Embedded systems coursework — a small alarm built around a microcontroller.',
+      desc: 'A small alarm built around a microcontroller, for the embedded systems course.',
       tech: ['C', 'Arduino'],
       href: 'https://github.com/MasterCruelty/alarm-project',
     },
@@ -39,13 +39,13 @@ const SITE = {
     {
       tag: 'software-eng',
       title: 'Bike Sharing',
-      desc: 'Full software engineering exercise — from requirements to a working prototype.',
+      desc: 'Software engineering project, from requirements to a working prototype.',
       tech: ['Java', 'UML'],
       href: 'https://github.com/MasterCruelty/bikesharingproject',
     },
     {
       tag: 'thesis',
-      title: "Bachelor's Thesis — IAC",
+      title: "Bachelor's Thesis (IAC)",
       desc: "Final dissertation work for the bachelor's degree.",
       tech: ['Research', 'LaTeX'],
       href: 'https://github.com/MasterCruelty/Thesis-IAC',
@@ -84,7 +84,7 @@ const SITE = {
     {
       tag: 'telegram',
       title: 'robbot',
-      desc: 'My personal Telegram bot — group helper and tinker playground.',
+      desc: 'My personal Telegram bot, a group helper and a playground for experiments.',
       tech: ['Python', 'Bot API'],
       href: 'https://github.com/MasterCruelty/robbot',
     },
@@ -108,7 +108,7 @@ const SITE = {
     {
       tag: 'data',
       title: 'GoKart Data Hub',
-      desc: 'Data analysis on go-kart races — telemetry meets weekend hobby.',
+      desc: 'Data analysis on go-kart races.',
       tech: ['Python', 'Pandas'],
       href: 'https://github.com/MasterCruelty/gokart-data-hub',
     },
@@ -133,7 +133,7 @@ const SITE = {
       brand: 'facebook',
       tag: 'main',
       title: 'Facebook',
-      desc: "The community's main page — original memes and chronicles.",
+      desc: "The community's main page, with original memes and chronicles.",
       cta: 'visit on facebook →',
       href: 'https://www.facebook.com/atmshitposting/',
     },
@@ -159,7 +159,7 @@ const SITE = {
   press: [
     {
       tag: 'interview',
-      title: 'Linea Diretta — Medium',
+      title: 'Linea Diretta on Medium',
       desc: 'ATM themselves interviewing the community and its memes.',
       cta: 'read the interview →',
       href: 'https://medium.com/lineadiretta/atm-incontra-suo-figlio-nato-a-suon-di-meme-cb6d82baaaea',
@@ -167,7 +167,7 @@ const SITE = {
     },
     {
       tag: 'video',
-      title: 'Milano AllNews — YouTube',
+      title: 'Milano AllNews on YouTube',
       desc: 'Video interview by Milano AllNews on the page and its origins.',
       cta: 'watch the video →',
       href: 'https://www.youtube.com/watch?v=d8mGHGavPSk&ab_channel=MilanoAllNews',
