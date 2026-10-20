@@ -91,9 +91,12 @@ const SITE = {
     {
       tag: 'linux',
       title: 'eMerger',
-      desc: 'A handy CLI tool for Linux devices, built with the Mergers crew.',
+      desc: 'A handy CLI tool for Linux devices.',
       tech: ['Shell', 'Linux'],
       href: 'https://github.com/TheMergers/emerger',
+      coauthors: [
+        { name: 'archetipico', href: 'https://archetipico.github.io/' },
+      ],
     },
     {
       tag: 'transit',

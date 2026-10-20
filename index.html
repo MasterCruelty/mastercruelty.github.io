@@ -15,10 +15,10 @@
   <header>
     <div class="logo">Master<span>Cruelty</span></div>
     <div class="logo-sep"></div>
-    <nav>
-      <button class="tab-btn active" data-tab="home"><span class="tab-idx">01</span>home</button>
-      <button class="tab-btn"        data-tab="progetti"><span class="tab-idx">02</span>progetti</button>
-      <button class="tab-btn"        data-tab="atmshitposting"><span class="tab-idx">03</span>at/m shitposting</button>
+    <nav role="tablist" aria-label="Sections">
+      <button class="tab-btn active" role="tab" id="btn-home"           data-tab="home"           aria-controls="tab-home"           aria-selected="true"><span class="tab-idx">01</span>home</button>
+      <button class="tab-btn"        role="tab" id="btn-progetti"       data-tab="progetti"       aria-controls="tab-progetti"       aria-selected="false" tabindex="-1"><span class="tab-idx">02</span>progetti</button>
+      <button class="tab-btn"        role="tab" id="btn-atmshitposting" data-tab="atmshitposting" aria-controls="tab-atmshitposting" aria-selected="false" tabindex="-1"><span class="tab-idx">03</span>at/m shitposting</button>
     </nav>
     <div class="header-spacer"></div>
     <div class="status">
@@ -30,7 +30,7 @@
   <div class="hero visible" id="hero">
     <div class="hero-glow" aria-hidden="true"></div>
     <p class="hero-tag">personal space</p>
-    <h1 class="hero-name">Hello,<br>I'm <span class="accent-txt">MasterCruelty</span><span class="caret">_</span></h1>
+    <h1 class="hero-name">Hello,<br>I'm <span class="nowrap"><span class="accent-txt">MasterCruelty</span><span class="caret" aria-hidden="true">_</span></span></h1>
     <p class="hero-sub">Welcome to my little corner of the internet — a place to collect academic work, side projects, and a community I've been running since 2017.</p>
     <div class="hero-divider"></div>
   </div>
@@ -38,7 +38,7 @@
   <main class="content-area">
 
     <!-- ────────── HOME ────────── -->
-    <section id="tab-home" class="tab-panel active">
+    <section id="tab-home" class="tab-panel active" role="tabpanel" aria-labelledby="btn-home">
       <div class="crumb"><span class="crumb-prompt">~/</span> home</div>
 
       <div class="home-grid">
@@ -63,7 +63,7 @@
     </section>
 
     <!-- ────────── PROGETTI ────────── -->
-    <section id="tab-progetti" class="tab-panel">
+    <section id="tab-progetti" class="tab-panel" role="tabpanel" aria-labelledby="btn-progetti">
       <div class="crumb"><span class="crumb-prompt">~/</span> progetti</div>
 
       <p class="section-label">university</p>
@@ -80,15 +80,20 @@
     </section>
 
     <!-- ────────── AT/M SHITPOSTING ────────── -->
-    <section id="tab-atmshitposting" class="tab-panel">
+    <section id="tab-atmshitposting" class="tab-panel" role="tabpanel" aria-labelledby="btn-atmshitposting">
       <div class="crumb"><span class="crumb-prompt">~/</span> at-m-shitposting</div>
 
-      <p class="section-label">community</p>
-      <h2 class="block-title">AT/M Shitposting</h2>
-      <p class="block-sub">
-        Founded on <strong>27 January 2017</strong> — satire and memes about ATM
-        (Azienda Trasporti Milanesi S.p.A) and the wider Milano universe.
-      </p>
+      <div class="community-head">
+        <img class="community-logo" src="src/logo.jpg" alt="AT/M Shitposting logo — Azienda Trasporti Memetici S.p.A" width="120" height="120" />
+        <div>
+          <p class="section-label">community</p>
+          <h2 class="block-title">AT/M Shitposting</h2>
+          <p class="block-sub">
+            Founded on <strong>27 January 2017</strong> — satire and memes about ATM
+            (Azienda Trasporti Milanesi S.p.A) and the wider Milano universe.
+          </p>
+        </div>
+      </div>
       <div class="card-grid" id="socials"></div>
 
       <div class="block-divider"></div>
@@ -102,9 +107,11 @@
   </main>
 
   <footer class="site-footer">
-    <span>© <span id="year"></span> MasterCruelty</span>
-    <span class="footer-dot">·</span>
-    <span>built with stubbornness &amp; coffee</span>
+    <div class="footer-inner">
+      <span>© <span id="year"></span> MasterCruelty</span>
+      <span class="footer-dot">·</span>
+      <span>built with stubbornness &amp; coffee</span>
+    </div>
   </footer>
 
   <script src="data.js"></script>
