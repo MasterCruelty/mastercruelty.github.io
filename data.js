@@ -50,6 +50,13 @@ const SITE = {
       href: 'https://github.com/MasterCruelty/Thesis-IAC',
     },
     {
+      tag: 'thesis',
+      title: "Master's Thesis (CIS Assessment)",
+      desc: 'A PowerShell tool that checks compliance with the CIS Benchmarks on Azure and VMware environments, plus the LaTeX source of the thesis.',
+      tech: ['PowerShell', 'Azure', 'VMware'],
+      href: 'https://github.com/MasterCruelty/Thesis-CIS-Assessment',
+    },
+    {
       tag: 'notes',
       title: 'Statistic Stuffs',
       desc: 'A growing pile of notes and exercises on statistics.',
@@ -69,6 +76,20 @@ const SITE = {
       desc: 'A simple cloud architecture project for the cloud computing course.',
       tech: ['Cloud', 'Docker'],
       href: 'https://github.com/MasterCruelty/cloud-computing-technologies',
+    },
+    {
+      tag: 'affective-computing',
+      title: 'AC-ISC-HR',
+      desc: 'Affective Computing exam project. Detects heart-rate synchronization between subjects during narrative stimuli, reproducing Pérez et al. (2021) on the BBBD dataset.',
+      tech: ['Python', 'SciPy', 'statsmodels'],
+      href: 'https://github.com/MasterCruelty/AC-ISC-HR',
+    },
+    {
+      tag: 'nlp',
+      title: 'Scientific Journal Analysis',
+      desc: "Measures how well each article matches a scientific journal's official scope, using sentence embeddings on articles fetched from the Crossref API.",
+      tech: ['Python', 'Sentence Transformers', 'Pandas'],
+      href: 'https://github.com/MasterCruelty/nlp-scientific-journal-analysis',
     },
   ],
 
@@ -124,6 +145,58 @@ const SITE = {
       desc: 'A starter template to spin up a Telegram bot or userbot fast.',
       tech: ['Python', 'Boilerplate'],
       href: 'https://github.com/MasterCruelty/tg-bot-skeleton',
+    },
+    {
+      tag: 'vmware',
+      title: 'VMware Magic Deploy',
+      desc: 'A tool to automatically deploy an entire VMware infrastructure (vCenter and ESXi), based on Ansible and PowerShell.',
+      tech: ['Ansible', 'PowerShell'],
+      href: 'https://github.com/MasterCruelty/VMwareMagicDeploy',
+    },
+    {
+      tag: 'vmware',
+      title: 'VMware PowerCLI',
+      desc: 'A collection of PowerShell scripts that use VMware PowerCLI to automate everyday tasks.',
+      tech: ['PowerShell', 'PowerCLI'],
+      href: 'https://github.com/MasterCruelty/VMware-PowerCLI',
+    },
+    {
+      tag: 'iac',
+      title: 'Terraform NSX VMC',
+      desc: 'Builds VMware NSX segments, services and security groups with Terraform, to migrate an on-prem infrastructure to VMware Cloud on AWS.',
+      tech: ['Terraform', 'NSX'],
+      href: 'https://github.com/MasterCruelty/Terraform-NSX-VMC',
+    },
+    {
+      tag: 'networking',
+      title: 'Setup Juniper EX2300',
+      desc: 'My notes and scripts for setting up a Juniper EX2300 switch.',
+      tech: ['Shell', 'Junos'],
+      href: 'https://github.com/MasterCruelty/setup-JuniperEX2300',
+    },
+  ],
+
+  games: [
+    {
+      tag: 'shooter',
+      title: 'Combat Augmented',
+      desc: 'A pixel-art 2D side-scrolling shooter for the browser, with a CRT effect and procedurally generated graphics and audio.',
+      tech: ['JavaScript', 'Docker'],
+      href: 'https://github.com/MasterCruelty/human-combat-augmented',
+    },
+    {
+      tag: 'survival',
+      title: 'Dead Perimeter',
+      desc: 'A 2D zombie siege survival game. Hold Fort Omega for 30 waves, scavenge the ruined city between waves and carry the vaccine out in the finale.',
+      tech: ['React', 'Canvas 2D', 'Vite'],
+      href: 'https://github.com/MasterCruelty/DeadPerimeter',
+    },
+    {
+      tag: 'puzzle',
+      title: 'Province Italiane',
+      desc: 'A route game: connect the starting province to the destination by naming every province you cross along the way.',
+      tech: ['JavaScript', 'Docker'],
+      href: 'https://github.com/MasterCruelty/travel-italian-provinces',
     },
   ],
 

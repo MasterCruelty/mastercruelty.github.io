@@ -71,6 +71,7 @@ fill('links',      SITE.links.map(linkRow).join(''));
 fill('stats',      SITE.stats.map(stat).join(''));
 fill('university', SITE.university.map(projectCard).join(''));
 fill('personal',   SITE.personal.map(projectCard).join(''));
+fill('games',      SITE.games.map(projectCard).join(''));
 fill('socials',    SITE.socials.map(linkCard('social-card')).join(''));
 fill('press',      SITE.press.map(linkCard('press-card')).join(''));
 

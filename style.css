@@ -384,6 +384,26 @@ nav {
 
 .block-sub strong { color: var(--white); }
 
+/* sub-section inside a block (e.g. games under personal projects) */
+.sub-title {
+  font-family: var(--sans);
+  font-weight: 800;
+  font-size: 1.15rem;
+  color: var(--white);
+  letter-spacing: -.01em;
+  margin: 40px 0 8px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.sub-title::before {
+  content: '';
+  width: 3px;
+  height: 1em;
+  background: var(--accent);
+}
+
 .block-divider {
   height: 1px;
   background: linear-gradient(90deg, transparent, var(--border), transparent);
