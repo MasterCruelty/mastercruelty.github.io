@@ -91,7 +91,8 @@ header {
   height: var(--nav-h);
   display: flex;
   align-items: center;
-  padding: 0 32px;
+  /* line the header up with the centered content column on wide screens */
+  padding: 0 max(var(--pad-x), calc((100% - var(--max-w)) / 2 + var(--pad-x)));
 }
 
 /* ── LOGO ───────────────────────────────────────── */
@@ -254,7 +255,7 @@ nav {
 .hero-name {
   font-family: var(--sans);
   font-weight: 800;
-  font-size: clamp(1.8rem, 8vw, 4.8rem);
+  font-size: clamp(1.8rem, 8vw, 4.3rem);
   color: var(--white);
   line-height: 1;
   letter-spacing: -.03em;
@@ -821,7 +822,7 @@ nav {
   :root { --pad-x: 20px; }
 
   /* two-row header: logo on top, tabs below */
-  header        { height: auto; flex-wrap: wrap; padding: 12px 16px 0; }
+  header        { height: auto; flex-wrap: wrap; padding: 12px var(--pad-x) 0; }
   .logo         { width: 100%; }
   .logo-sep,
   .header-spacer,

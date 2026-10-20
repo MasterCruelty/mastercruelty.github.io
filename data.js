@@ -5,7 +5,7 @@
 
 const SITE = {
   skills: [
-    'Python', 'Telegram Bots', 'Linux', 'Data Analysis', 'C / Go', 'Cloud',
+    'Python', 'PowerShell', 'VMware', 'Terraform', 'Linux', 'Go', 'Telegram bots', 'Data analysis',
   ],
 
   links: [
@@ -15,38 +15,38 @@ const SITE = {
     { key: 'instagram', val: '@atm_shitposting', href: 'https://www.instagram.com/atm_shitposting' },
   ],
 
+  // the "projects" stat is counted automatically at the bottom of this file
   stats: [
-    { num: '15', plus: true,  label: 'public repos' },
-    { num: '2017',            label: 'atm shitposting founded' },
+    { num: '2017', label: 'atm shitposting founded' },
   ],
 
   university: [
     {
       tag: 'embedded',
       title: 'Alarm Project',
-      desc: 'A small alarm built around a microcontroller, for the embedded systems course.',
-      tech: ['C', 'Arduino'],
+      desc: 'An alarm made for the embedded systems exam. Ultrasonic sensors watch the room and, if something moves, a buzzer goes off and an alert is sent via MQTT.',
+      tech: ['Arduino', 'C++', 'MQTT'],
       href: 'https://github.com/MasterCruelty/alarm-project',
     },
     {
       tag: 'architecture',
       title: 'Half-Life Assembly',
-      desc: 'Computer architecture project, working close to the metal in assembly.',
-      tech: ['Assembly', 'x86'],
+      desc: 'A text-based game about the first Half-Life, made for the computer architecture exam. Help Gordon Freeman escape from Black Mesa!',
+      tech: ['MIPS', 'QtSpim'],
       href: 'https://github.com/MasterCruelty/halflifeassembly',
     },
     {
       tag: 'software-eng',
       title: 'Bike Sharing',
-      desc: 'Software engineering project, from requirements to a working prototype.',
-      tech: ['Java', 'UML'],
+      desc: 'A bike sharing simulator: you sign up, buy a subscription, rent a bike and pay when you give it back.',
+      tech: ['Java', 'MySQL', 'StarUML'],
       href: 'https://github.com/MasterCruelty/bikesharingproject',
     },
     {
       tag: 'thesis',
       title: "Bachelor's Thesis (IAC)",
-      desc: "Final dissertation work for the bachelor's degree.",
-      tech: ['Research', 'LaTeX'],
+      desc: 'An Infrastructure as Code solution to deploy an infrastructure for DevOps environments, with the Jenkins pipelines and the LaTeX source of the thesis.',
+      tech: ['Terraform', 'Jenkins', 'Bash'],
       href: 'https://github.com/MasterCruelty/Thesis-IAC',
     },
     {
@@ -59,22 +59,22 @@ const SITE = {
     {
       tag: 'notes',
       title: 'Statistic Stuffs',
-      desc: 'A growing pile of notes and exercises on statistics.',
-      tech: ['Stats', 'R'],
+      desc: 'A bunch of notes about statistics: theory written in LaTeX and some practice in Jupyter.',
+      tech: ['LaTeX', 'Jupyter'],
       href: 'https://github.com/MasterCruelty/StatisticStuffs',
     },
     {
       tag: 'algorithms',
       title: 'C / Go Algorithms',
-      desc: 'Notes and source code for classic algorithms, in C and Go.',
+      desc: 'A bunch of source files in C and Go I wrote to prepare the Algorithms & Data Structures exam.',
       tech: ['C', 'Go'],
       href: 'https://github.com/MasterCruelty/C-Go-Algorithms',
     },
     {
       tag: 'cloud',
       title: 'Cloud Computing',
-      desc: 'A simple cloud architecture project for the cloud computing course.',
-      tech: ['Cloud', 'Docker'],
+      desc: 'A small microservices architecture behind an API gateway, made for the cloud computing exam.',
+      tech: ['Python', 'Flask', 'Docker', 'Nginx'],
       href: 'https://github.com/MasterCruelty/cloud-computing-technologies',
     },
     {
@@ -97,23 +97,23 @@ const SITE = {
     {
       tag: 'telegram',
       title: 'my-tg-app',
-      desc: 'A Telegram userbot packed with utilities I use every day.',
-      tech: ['Python', 'Telethon'],
+      desc: 'A Telegram userbot with a lot of features I needed day by day.',
+      tech: ['Python', 'Pyrogram'],
       href: 'https://github.com/MasterCruelty/my-tg-app',
     },
     {
       tag: 'telegram',
       title: 'robbot',
-      desc: 'My personal Telegram bot, a group helper and a playground for experiments.',
-      tech: ['Python', 'Bot API'],
+      desc: 'My Telegram bot. It shares some commands with my userbot and adds new ones, using APIs like OpenWeatherMap, OpenAI and Unsplash.',
+      tech: ['Python', 'Pyrogram'],
       href: 'https://github.com/MasterCruelty/robbot',
     },
     {
-      tag: 'linux',
+      tag: 'cli',
       title: 'eMerger',
-      desc: 'A handy CLI tool for Linux devices.',
-      tech: ['Shell', 'Linux'],
-      href: 'https://github.com/TheMergers/emerger',
+      desc: 'One command, up, to update and clean every package manager on Linux, macOS and Windows.',
+      tech: ['Bash', 'PowerShell'],
+      href: 'https://github.com/MasterCruelty/eMerger',
       coauthors: [
         { name: 'archetipico', href: 'https://archetipico.github.io/' },
       ],
@@ -121,29 +121,29 @@ const SITE = {
     {
       tag: 'transit',
       title: 'Metro Flow Router',
-      desc: 'Calculates routes and fetches live data about metro systems.',
-      tech: ['Python', 'Graphs'],
+      desc: 'A funny tool to explore the metro network of your favourite cities and find the shortest route between two stations.',
+      tech: ['Go', 'Graphs'],
       href: 'https://github.com/MasterCruelty/MetroFlowRouter',
     },
     {
       tag: 'data',
       title: 'GoKart Data Hub',
-      desc: 'Data analysis on go-kart races.',
-      tech: ['Python', 'Pandas'],
+      desc: 'Reads a CSV with your go-kart races and plots a few graphs to show your trend over the years.',
+      tech: ['Python', 'Pandas', 'Matplotlib'],
       href: 'https://github.com/MasterCruelty/gokart-data-hub',
     },
     {
       tag: 'data',
       title: 'Telegram Chat Insights',
-      desc: 'Userbot that runs simple analytics on your personal chat interactions.',
-      tech: ['Python', 'Telethon'],
+      desc: 'A userbot that plots charts about your personal chats.',
+      tech: ['Python', 'Pyrogram'],
       href: 'https://github.com/MasterCruelty/TelegramChatInsights',
     },
     {
       tag: 'template',
       title: 'tg-bot-skeleton',
-      desc: 'A starter template to spin up a Telegram bot or userbot fast.',
-      tech: ['Python', 'Boilerplate'],
+      desc: 'A skeleton to quickly create a Telegram bot or userbot.',
+      tech: ['Python', 'Pyrogram'],
       href: 'https://github.com/MasterCruelty/tg-bot-skeleton',
     },
     {
@@ -156,7 +156,7 @@ const SITE = {
     {
       tag: 'vmware',
       title: 'VMware PowerCLI',
-      desc: 'A collection of PowerShell scripts that use VMware PowerCLI to automate everyday tasks.',
+      desc: 'A bunch of PowerShell scripts that use VMware PowerCLI to automate some tasks.',
       tech: ['PowerShell', 'PowerCLI'],
       href: 'https://github.com/MasterCruelty/VMware-PowerCLI',
     },
@@ -170,7 +170,7 @@ const SITE = {
     {
       tag: 'networking',
       title: 'Setup Juniper EX2300',
-      desc: 'My notes and scripts for setting up a Juniper EX2300 switch.',
+      desc: 'A few notes and scripts of mine on setting up a Juniper EX2300 switch.',
       tech: ['Shell', 'Junos'],
       href: 'https://github.com/MasterCruelty/setup-JuniperEX2300',
     },
@@ -205,7 +205,7 @@ const SITE = {
       brand: 'facebook',
       tag: 'main',
       title: 'Facebook',
-      desc: "The community's main page, with original memes and chronicles.",
+      desc: 'The main page of the community.',
       cta: 'visit on facebook →',
       href: 'https://www.facebook.com/atmshitposting/',
     },
@@ -213,7 +213,7 @@ const SITE = {
       brand: 'instagram',
       tag: 'visual',
       title: 'Instagram',
-      desc: 'Visual content and a steady feed of fresh memes.',
+      desc: 'Memes and visual content.',
       cta: 'visit on instagram →',
       href: 'https://www.instagram.com/atm_shitposting',
     },
@@ -221,7 +221,7 @@ const SITE = {
       brand: 'telegram',
       tag: 'updates',
       title: 'Telegram',
-      desc: 'Official channel for updates and behind-the-scenes posts.',
+      desc: 'The official channel for updates.',
       cta: 'visit on telegram →',
       href: 'https://t.me/atmshitpostingChannel',
       rel: 'noopener noreferrer nofollow',
@@ -232,7 +232,7 @@ const SITE = {
     {
       tag: 'interview',
       title: 'Linea Diretta on Medium',
-      desc: 'ATM themselves interviewing the community and its memes.',
+      desc: 'An interview by ATM itself about the community and the memes.',
       cta: 'read the interview →',
       href: 'https://medium.com/lineadiretta/atm-incontra-suo-figlio-nato-a-suon-di-meme-cb6d82baaaea',
       rel: 'noopener noreferrer nofollow',
@@ -240,9 +240,15 @@ const SITE = {
     {
       tag: 'video',
       title: 'Milano AllNews on YouTube',
-      desc: 'Video interview by Milano AllNews on the page and its origins.',
+      desc: 'A video interview by Milano AllNews.',
       cta: 'watch the video →',
       href: 'https://www.youtube.com/watch?v=d8mGHGavPSk&ab_channel=MilanoAllNews',
     },
   ],
 };
+
+// counted from the lists above, so it never goes out of date
+SITE.stats.unshift({
+  num: String(SITE.university.length + SITE.personal.length + SITE.games.length),
+  label: 'projects on this page',
+});
