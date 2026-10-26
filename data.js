@@ -178,13 +178,6 @@ const SITE = {
 
   games: [
     {
-      tag: 'shooter',
-      title: 'Combat Augmented',
-      desc: 'A pixel-art 2D side-scrolling shooter for the browser, with a CRT effect and procedurally generated graphics and audio.',
-      tech: ['JavaScript', 'Docker'],
-      href: 'https://github.com/MasterCruelty/human-combat-augmented',
-    },
-    {
       tag: 'survival',
       title: 'Dead Perimeter',
       desc: 'A 2D zombie siege survival game. Hold Fort Omega for 30 waves, scavenge the ruined city between waves and carry the vaccine out in the finale.',
